@@ -1,3 +1,3 @@
 ## Django Template
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/GB6Eki?referralCode=U5zXSw)
+Link to my backend : https://django-server-production-d333.up.railway.app/

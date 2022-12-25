@@ -17,7 +17,7 @@ DEBUG = False
 #  Change this later
 ALLOWED_HOSTS = ["*"]
 #  allwoed host for cors
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 # Application definition

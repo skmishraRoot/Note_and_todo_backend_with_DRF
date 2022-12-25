@@ -6,6 +6,7 @@ from rest_framework.decorators import api_view
 def Home(request):
     routes = {
         'Todo_app':"/api/tasks",
-        'Notes_app':"/api/Notes"
+        'Notes_app':"/api/Notes",
+        'accounts':"/register"
     }
     return  Response(routes)

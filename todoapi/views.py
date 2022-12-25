@@ -7,12 +7,13 @@ from todoapi.serializers import TaskSerializer
 # Importing task table from models.
 from todoapi.models import Task
 
+
 # List View class
 class TaskListView(ListAPIView):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
 
-
+    
 # Create View class
 class TaskCreateView(CreateAPIView):
     queryset = Task.objects.all()

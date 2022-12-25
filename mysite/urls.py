@@ -7,4 +7,5 @@ urlpatterns = [
     path('', Home, name='Home-page'),
     path('', include('todoapi.urls')),
     path('', include('Notesapi.urls')),
+    path('', include('authapi.urls')),
 ]

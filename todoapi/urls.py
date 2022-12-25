@@ -5,9 +5,9 @@ from todoapi.views import TaskListView, TaskCreateView, TaskRetrieveView, TaskUp
 
 
 urlpatterns = [
-    path('api/tasks/', TaskListView.as_view()),
-    path('api/tasks/create/', TaskCreateView.as_view()),
-    path('api/tasks/update/<str:pk>/', TaskUpdateView.as_view()),
-    path('api/tasks/delete/<str:pk>/', TaskDestroyView.as_view()),
-    path('api/tasks/<str:pk>/', TaskRetrieveView.as_view()),
+    path('api/todo/', TaskListView.as_view()),
+    path('api/todo/create/', TaskCreateView.as_view()),
+    path('api/todo/update/<str:pk>/', TaskUpdateView.as_view()),
+    path('api/todo/delete/<str:pk>/', TaskDestroyView.as_view()),
+    path('api/todo/<str:pk>/', TaskRetrieveView.as_view()),
 ]

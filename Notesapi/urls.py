@@ -5,9 +5,9 @@ from Notesapi.views import NoteListView, NoteCreateView, NoteRetrieveView, NoteU
 
 
 urlpatterns = [
-    path('api/Notes/', NoteListView.as_view()),
-    path('api/Notes/create/', NoteCreateView.as_view()),
-    path('api/Notes/update/<str:pk>/', NoteUpdateView.as_view()),
-    path('api/Notes/delete/<str:pk>/', NoteDestroyView.as_view()),
-    path('api/Notes/<str:pk>/', NoteRetrieveView.as_view()),
+    path('api/notes/', NoteListView.as_view()),
+    path('api/notes/create/', NoteCreateView.as_view()),
+    path('api/notes/update/<str:pk>/', NoteUpdateView.as_view()),
+    path('api/notes/delete/<str:pk>/', NoteDestroyView.as_view()),
+    path('api/notes/<str:pk>/', NoteRetrieveView.as_view()),
 ]

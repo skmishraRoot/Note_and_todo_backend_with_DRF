@@ -14,7 +14,11 @@ SECRET_KEY = 'django-insecure-rc^*w^w&6g9_(uvx#6s*bnt!w)l0rdi%!l7mv#y%uc&x%wo5pk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+#  Change this later
 ALLOWED_HOSTS = ["*"]
+#  allwoed host for cors
+CORS_ORIGIN_ALLOW_ALL = True
+
 
 # Application definition
 
@@ -29,6 +33,7 @@ INSTALLED_APPS = [
     'todoapi.apps.TodoapiConfig',
     'Notesapi.apps.NotesapiConfig',
     'rest_framework',
+    'corsheaders',
 ]
 
 
@@ -42,6 +47,7 @@ REST_FRAMEWORK = {
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',

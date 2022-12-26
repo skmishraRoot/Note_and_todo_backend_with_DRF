@@ -12,4 +12,5 @@ class RegisterUser(CreateAPIView):
 
 # user tokens view
 class MyTokenObtainPairView(TokenObtainPairView):
+    queryset = User.objects.all()
     serializer_class = MyTokenObtainPairSerializer

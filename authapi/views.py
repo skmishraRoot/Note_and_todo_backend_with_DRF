@@ -3,7 +3,7 @@ from rest_framework.generics import CreateAPIView
 from authapi.serializers import RegisterUserSerializer, MyTokenObtainPairSerializer
 from django.contrib.auth.models import User
 from rest_framework_simplejwt.views import TokenObtainPairView
-
+from django.contrib.auth import login
 
 # Register user view
 class RegisterUser(CreateAPIView):

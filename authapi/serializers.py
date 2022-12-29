@@ -7,7 +7,6 @@ from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 
 
-
 # Making serializer for Registering a User
 class RegisterUserSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(
@@ -25,7 +24,6 @@ class RegisterUserSerializer(serializers.ModelSerializer):
     def validate(self, attrs):
         if attrs['password'] != attrs['password2']:
             raise serializers.ValidationError({"password": "Password fields didn't match."})
-
         return attrs
 
     def create(self, validated_data):
@@ -33,11 +31,8 @@ class RegisterUserSerializer(serializers.ModelSerializer):
             username=validated_data['username'],
             email=validated_data['email'],
         )
-
-        
         user.set_password(validated_data['password'])
         user.save()
-
         return user
 
 

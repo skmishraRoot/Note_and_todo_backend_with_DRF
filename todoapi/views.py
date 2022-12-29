@@ -17,7 +17,7 @@ class TaskListView(ListAPIView):
 
     def get_queryset(self):
         user = self.request.user
-        task = Note.objects.filter(user=user)
+        task = Task.objects.filter(user=user)
         return task
 
 
@@ -39,7 +39,7 @@ class TaskRetrieveView(RetrieveAPIView):
 
     def get_queryset(self):
         user = self.request.user
-        task = Note.objects.filter(user=user)
+        task = Task.objects.filter(user=user)
         return task
 
 

@@ -17,8 +17,8 @@ class TaskListView(ListAPIView):
 
     def get_queryset(self):
         user = self.request.user
-        notes = Note.objects.filter(user=user)
-        return notes
+        task = Note.objects.filter(user=user)
+        return task
 
 
     
@@ -28,10 +28,6 @@ class TaskCreateView(CreateAPIView):
     serializer_class = TaskSerializer
     permission_classes = [IsAuthenticated,]
 
-    def get_queryset(self):
-        user = self.request.user
-        notes = Note.objects.filter(user=user)
-        return notes
 
 
 
@@ -43,8 +39,8 @@ class TaskRetrieveView(RetrieveAPIView):
 
     def get_queryset(self):
         user = self.request.user
-        notes = Note.objects.filter(user=user)
-        return notes
+        task = Note.objects.filter(user=user)
+        return task
 
 
 
@@ -54,11 +50,6 @@ class TaskUpdateView(UpdateAPIView):
     serializer_class = TaskSerializer
     permission_classes = [IsAuthenticated,]
 
-    def get_queryset(self):
-        user = self.request.user
-        notes = Note.objects.filter(user=user)
-        return notes
-
 
 
 # Delete View class
@@ -67,7 +58,3 @@ class TaskDestroyView(DestroyAPIView):
     serializer_class = TaskSerializer
     permission_classes = [IsAuthenticated,]
 
-    def get_queryset(self):
-        user = self.request.user
-        notes = Note.objects.filter(user=user)
-        return notes

@@ -25,10 +25,6 @@ class NoteCreateView(CreateAPIView):
     serializer_class = NoteSerializer
     permission_classes = [IsAuthenticated,]
 
-    def get_queryset(self):
-        user = self.request.user
-        notes = Note.objects.filter(user=user)
-        return notes
 
 
 # Retrive View class
@@ -48,18 +44,9 @@ class NoteUpdateView(UpdateAPIView):
     serializer_class = NoteSerializer
     permission_classes = [IsAuthenticated,]
 
-    def get_queryset(self):
-        user = self.request.user
-        notes = Note.objects.filter(user=user)
-        return notes
 
 # Delete View class
 class NoteDestroyView(DestroyAPIView):
     queryset = Note.objects.all()
     serializer_class = NoteSerializer
     permission_classes = [IsAuthenticated,]
-
-    def get_queryset(self):
-        user = self.request.user
-        notes = Note.objects.filter(user=user)
-        return notes
